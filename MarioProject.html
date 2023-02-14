@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+			#pyramid {
+					font-family: "Courier New", monospace;
+			}
+		</style>
+</head>
+<body>
+    <h1>Mario 2</h1>
+    <h3>
+				Behold this wonderful pyramid:
+    </h3>
+
+		<div id="pyramid">
+				<!-- Our pyramid will go inside here -->
+
+				<div id="construction">
+    				<p>Uh oh! the pyramid is still under construction.</p>
+    				<p>Check back again soon... our developers are hard at work as we speak!</p>
+				</div>
+		</div>
+	
+		<script src="mario.js"></script>
+</body>
+</html>
+
+printPyramid(5);
+// TODO #2
+// Take in user input for the height
+let height = prompt("Height?");
+
+/*
+ * printPyramid
+ *
+ * Prints to the console a pyramid of '#' characters of the specified height
+ * For example, if height is 5, the console will look like this:
+ *          ##
+ *         ###
+ *        ####
+ *       #####
+ *      ######
+ */
+function printPyramid(height) {
+let space = " ";
+let brick = "#";
+let layer = space+space+brick+brick;
+let rows = 8;
+let str = '';
+for(let i=0; i<rows; i++){
+	str = "";
+	for(let j=0; j<rows+1; j++){
+		str += "#";
+	}
+console.log(str);
+}
+console.log(space(9)+brick(2));
+console.log(space(8)+brick(3));
+console.log(space(7)+brick(4));
+console.log(space(6)+brick(5));
+console.log(space(5)+brick(6));
+console.log(space(4)+brick(7));
+console.log(space(3)+brick(8));
+console.log(space(2)+brick(9));
+console.log(space + brick(10));
+    // TODO #1
+    // print that pyramid!
+	console.log(printPyramid);
+)}
